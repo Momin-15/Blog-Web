@@ -8,7 +8,12 @@ const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRotes");
 const adminRoutes = require("./routes/adminRoutes");
 const commentRoutes = require("./routes/commentRoutes");
+const cors = require("cors");
 
+app.use(cors({
+  origin: "https://blog-web-eight-tau.vercel.app/",
+  credentials: true,
+}));
 const app = express();
 
 app.use(
